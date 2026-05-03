@@ -89,25 +89,25 @@ export default function Home() {
                       <div className="space-y-2 opacity-90">
                          <p className="text-[#2997ff] flex items-center gap-2 font-bold">
                            <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                           > Initializing search algorithm...
+                           &gt; Initializing search algorithm...
                          </p>
-                         <p className="text-gray-400">> Fetching mobile.de, autoscout24, and dealer networks...</p>
-                         <p className="text-gray-400">> Found: <span className="text-white font-bold">5,402,198</span> vehicles.</p>
+                         <p className="text-gray-400">&gt; Fetching mobile.de, autoscout24, and dealer networks...</p>
+                         <p className="text-gray-400">&gt; Found: <span className="text-white font-bold">5,402,198</span> vehicles.</p>
                       </div>
                       
                       <div className="h-px w-full bg-white/10 my-4"></div>
                       
                       <div className="space-y-2">
-                         <p className="text-[#34c759]">> Applying user criteria: Audi A6 Avant, Diesel, &lt;80k km</p>
-                         <p className="text-gray-400">> Pre-filtering... [4,201 matches]</p>
-                         <p className="text-yellow-400">> Running VIN fraud check... <span className="text-red-400 line-through">1,402 rejected (accidents)</span></p>
-                         <p className="text-gray-400">> Calculating Spanish taxes (CO2 emissions)... Done.</p>
+                         <p className="text-[#34c759]">&gt; Applying user criteria: Audi A6 Avant, Diesel, &lt;80k km</p>
+                         <p className="text-gray-400">&gt; Pre-filtering... [4,201 matches]</p>
+                         <p className="text-yellow-400">&gt; Running VIN fraud check... <span className="text-red-400 line-through">1,402 rejected (accidents)</span></p>
+                         <p className="text-gray-400">&gt; Calculating Spanish taxes (CO2 emissions)... Done.</p>
                       </div>
                       
                       <div className="h-px w-full bg-white/10 my-4"></div>
                       
                       <div>
-                         <p className="text-[#2997ff] font-bold mb-3">> PERFECT MATCH FOUND:</p>
+                         <p className="text-[#2997ff] font-bold mb-3">&gt; PERFECT MATCH FOUND:</p>
                          <div className="bg-white/5 border border-white/10 rounded-xl p-4">
                             <div className="flex justify-between items-center mb-2">
                                <span className="text-white font-bold text-base">Audi A6 Avant 50 TDI</span>
