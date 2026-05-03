@@ -142,6 +142,105 @@ export default function Home() {
         </div>
       </section>
 
+      </section>
+
+      {/* Success Stories / Testimonials */}
+      <section className="bg-white py-24 mt-10">
+        <div className="container mx-auto px-5 max-w-[1280px]">
+          <div className="text-center mb-16">
+             <h2 className="text-4xl font-extrabold text-text-main mb-4">
+                Coches reales. Ahorros reales.
+             </h2>
+             <p className="text-lg text-text-muted max-w-2xl mx-auto">
+                No te fíes solo de nuestro algoritmo. Descubre lo que opinan los clientes que ya han recibido su coche llave en mano en la puerta de su casa.
+             </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+             {/* Testimonial 1 */}
+             <div className="bg-surface rounded-3xl p-8 border border-border-color shadow-[0_4px_20px_rgba(0,0,0,0.02)] relative hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all">
+                <div className="absolute top-6 right-6 text-[#2997ff] opacity-10">
+                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                </div>
+                <div className="flex items-center gap-4 mb-6">
+                   <div className="w-14 h-14 bg-gradient-to-br from-[#2997ff] to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-sm">C</div>
+                   <div>
+                     <h4 className="font-bold text-lg text-text-main">Carlos Martínez</h4>
+                     <p className="text-sm text-text-muted">Madrid, España</p>
+                   </div>
+                </div>
+                <p className="text-text-main font-medium italic mb-6 leading-relaxed relative z-10">
+                  "Estaba a punto de comprar un Serie 4 en un concesionario local. Usé la IA de AutoImport y encontraron una unidad mucho más equipada en Múnich. El ahorro fue tan grande que al principio no me lo creía."
+                </p>
+                <div className="bg-[#f5f5f7] rounded-2xl p-4 flex justify-between items-center">
+                   <div>
+                     <p className="text-[10px] text-text-muted font-bold uppercase mb-1 tracking-wider">Vehículo Importado</p>
+                     <p className="font-semibold text-sm">BMW Serie 4 M Sport</p>
+                   </div>
+                   <div className="text-right">
+                     <p className="text-[10px] text-text-muted font-bold uppercase mb-1 tracking-wider">Ahorro IA</p>
+                     <p className="font-bold text-green-600">4.850 €</p>
+                   </div>
+                </div>
+             </div>
+
+             {/* Testimonial 2 */}
+             <div className="bg-surface rounded-3xl p-8 border border-border-color shadow-[0_4px_20px_rgba(0,0,0,0.02)] relative hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all md:-translate-y-4">
+                <div className="absolute top-6 right-6 text-[#2997ff] opacity-10">
+                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                </div>
+                <div className="flex items-center gap-4 mb-6">
+                   <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-sm">L</div>
+                   <div>
+                     <h4 className="font-bold text-lg text-text-main">Laura Gómez</h4>
+                     <p className="text-sm text-text-muted">Barcelona, España</p>
+                   </div>
+                </div>
+                <p className="text-text-main font-medium italic mb-6 leading-relaxed relative z-10">
+                  "El servicio Llave en Mano es espectacular. Yo solo elegí el coche que me recomendó su sistema y ellos se encargaron de todo. En dos semanas lo tenía matriculado en la puerta de mi casa sin mover un dedo."
+                </p>
+                <div className="bg-[#f5f5f7] rounded-2xl p-4 flex justify-between items-center">
+                   <div>
+                     <p className="text-[10px] text-text-muted font-bold uppercase mb-1 tracking-wider">Vehículo Importado</p>
+                     <p className="font-semibold text-sm">Audi Q5 S-Line</p>
+                   </div>
+                   <div className="text-right">
+                     <p className="text-[10px] text-text-muted font-bold uppercase mb-1 tracking-wider">Ahorro IA</p>
+                     <p className="font-bold text-green-600">5.200 €</p>
+                   </div>
+                </div>
+             </div>
+
+             {/* Testimonial 3 */}
+             <div className="bg-surface rounded-3xl p-8 border border-border-color shadow-[0_4px_20px_rgba(0,0,0,0.02)] relative hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all">
+                <div className="absolute top-6 right-6 text-[#2997ff] opacity-10">
+                  <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                </div>
+                <div className="flex items-center gap-4 mb-6">
+                   <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-sm">D</div>
+                   <div>
+                     <h4 className="font-bold text-lg text-text-main">David Ruiz</h4>
+                     <p className="text-sm text-text-muted">Valencia, España</p>
+                   </div>
+                </div>
+                <p className="text-text-main font-medium italic mb-6 leading-relaxed relative z-10">
+                  "Me daba pánico el fraude en la importación. Ver cómo el algoritmo descartaba coches por accidentes ocultos o cuentakilómetros tocados me dio muchísima tranquilidad. Una inversión 100% segura."
+                </p>
+                <div className="bg-[#f5f5f7] rounded-2xl p-4 flex justify-between items-center">
+                   <div>
+                     <p className="text-[10px] text-text-muted font-bold uppercase mb-1 tracking-wider">Vehículo Importado</p>
+                     <p className="font-semibold text-sm">Tesla Model 3 LR</p>
+                   </div>
+                   <div className="text-right">
+                     <p className="text-[10px] text-text-muted font-bold uppercase mb-1 tracking-wider">Ahorro IA</p>
+                     <p className="font-bold text-green-600">3.900 €</p>
+                   </div>
+                </div>
+             </div>
+          </div>
+        </div>
+      </section>
+
       {/* Promo Banner */}
       <section className="container mx-auto px-5 mt-20 mb-20 max-w-[1000px]">
         <div className="bg-surface rounded-3xl p-16 text-center text-text-main shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-border-color">
