@@ -4,10 +4,10 @@ import CarCard from '@/components/CarCard';
 
 export default function Home() {
   const dummyFeaturedCars = [
-    { id: 'celica-v', make: 'Toyota', model: 'Celica "Pies Grandes Edition"', year: 2004, mileage: 154000, fuel: 'Petrol', price: 500, badge: 'DESTACADO', location: 'Granada', image: '/assets/celica.jpg' },
-    { id: '1', make: 'Tesla', model: 'Model 3 Long Range', year: 2023, mileage: 12500, fuel: 'Electric', price: 45900, badge: 'Great Price', location: 'Berlin, DE', image: '/assets/listing_car.png' },
-    { id: '2', make: 'BMW', model: 'X5 xDrive40i', year: 2021, mileage: 42000, fuel: 'Gasoline', price: 58500, badge: 'Top Seller', location: 'Munich, DE', image: '/assets/listing_car.png' },
-    { id: '3', make: 'Audi', model: 'A6 Avant 50 TDI', year: 2020, mileage: 78000, fuel: 'Diesel', price: 39800, location: 'Hamburg, DE', image: '/assets/listing_car.png' }
+    { id: 'celica-v', make: 'Toyota', model: 'Celica "Pies Grandes Edition"', year: 2004, mileage: 154000, fuel: 'Petrol', price: 500, badge: 'DESTACADO', location: 'Granada', image: '/AutoImportAI-Proyect/assets/celica.jpg' },
+    { id: '1', make: 'Tesla', model: 'Model 3 Long Range', year: 2023, mileage: 12500, fuel: 'Electric', price: 45900, badge: 'Great Price', location: 'Berlin, DE', image: '/AutoImportAI-Proyect/assets/listing_car.png' },
+    { id: '2', make: 'BMW', model: 'X5 xDrive40i', year: 2021, mileage: 42000, fuel: 'Gasoline', price: 58500, badge: 'Top Seller', location: 'Munich, DE', image: '/AutoImportAI-Proyect/assets/listing_car.png' },
+    { id: '3', make: 'Audi', model: 'A6 Avant 50 TDI', year: 2020, mileage: 78000, fuel: 'Diesel', price: 39800, location: 'Hamburg, DE', image: '/AutoImportAI-Proyect/assets/listing_car.png' }
   ];
 
   return (

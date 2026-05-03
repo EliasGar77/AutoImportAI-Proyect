@@ -17,7 +17,7 @@ export default async function DetailPage({ params }: { params: { id: string } })
   const make = isCelica ? 'Toyota' : isAudi ? 'Audi' : 'Premium Car';
   const modelStr = isCelica ? 'Celica "Pies Grandes Edition"' : `Model ${resolvedParams.id}`;
   const price = isCelica ? '500' : resolvedParams.id === '1' ? '35,900' : '42,000';
-  const imageUrl = isCelica ? '/assets/celica.jpg' : '/assets/listing_car.png';
+  const imageUrl = isCelica ? '/AutoImportAI-Proyect/assets/celica.jpg' : '/AutoImportAI-Proyect/assets/listing_car.png';
 
   const descriptionText = isCelica 
     ? "El mejor coche para los amantes de los tuneles. Seras el terror de los vuelcos. Atestados se sabra hasta tu lunar mas escondido 🥵. Solo apto si te dejas 3000 en unas llantas mas feas que un cls del 2006."

@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   output: 'export',
   basePath: '/AutoImportAI-Proyect',
   assetPrefix: '/AutoImportAI-Proyect',
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

@@ -2,18 +2,18 @@ import CarCard from '@/components/CarCard';
 
 export default function SearchResultsPage() {
   const dummyCars = [
-    { id: '1', make: 'Tesla', model: 'Model 3 Long Range', year: 2023, mileage: 12500, fuel: 'Eléctrico', price: 45900, badge: 'Recomendado', image: '/assets/listing_car.png', aiRating: 'Excelente', estimatedSaving: 4500 },
-    { id: '2', make: 'BMW', model: 'X5 xDrive40i', year: 2021, mileage: 42000, fuel: 'Gasolina', price: 58500, badge: 'Novedad', image: '/assets/listing_car.png', aiRating: 'Muy Bueno', estimatedSaving: 3200 },
-    { id: '3', make: 'Audi', model: 'A6 Avant 50 TDI', year: 2020, mileage: 78000, fuel: 'Diésel', price: 39800, image: '/assets/listing_car.png', aiRating: 'Bueno', estimatedSaving: 2100 },
-    { id: '4', make: 'Volkswagen', model: 'Golf VIII 1.5 eTSI', year: 2022, mileage: 21000, fuel: 'Híbrido', price: 24500, badge: 'Gran Oportunidad', image: '/assets/listing_car.png', aiRating: 'Excelente', estimatedSaving: 2800 },
-    { id: '5', make: 'Mercedes-Benz', model: 'C-Class C220d', year: 2021, mileage: 35000, fuel: 'Diésel', price: 41200, image: '/assets/listing_car.png', aiRating: 'Muy Bueno', estimatedSaving: 2500 },
-    { id: '6', make: 'Porsche', model: '911 Carrera 4S', year: 2020, mileage: 18000, fuel: 'Gasolina', price: 118000, badge: 'Garantía Oficial', image: '/assets/listing_car.png', aiRating: 'Premium', estimatedSaving: 8900 },
-    { id: '7', make: 'Volvo', model: 'XC60 B4 Inscription', year: 2022, mileage: 28000, fuel: 'Diésel Micro', price: 46900, image: '/assets/listing_car.png', aiRating: 'Bueno', estimatedSaving: 3100 },
-    { id: '8', make: 'Audi', model: 'Q5 40 TDI quattro', year: 2021, mileage: 54000, fuel: 'Diésel', price: 42500, badge: 'Oportunidad', image: '/assets/listing_car.png', aiRating: 'Excelente', estimatedSaving: 3800 },
-    { id: '9', make: 'Ford', model: 'Mustang Mach-E', year: 2023, mileage: 8000, fuel: 'Eléctrico', price: 52000, image: '/assets/listing_car.png', aiRating: 'Muy Bueno', estimatedSaving: 4100 },
-    { id: '10', make: 'Hyundai', model: 'Tucson 1.6 TGDI', year: 2022, mileage: 15000, fuel: 'Híbrido', price: 31500, badge: 'Recomendado', image: '/assets/listing_car.png', aiRating: 'Excelente', estimatedSaving: 2900 },
-    { id: '11', make: 'Toyota', model: 'RAV4 Hybrid', year: 2021, mileage: 45000, fuel: 'Híbrido', price: 29900, image: '/assets/listing_car.png', aiRating: 'Bueno', estimatedSaving: 1500 },
-    { id: '12', make: 'Land Rover', model: 'Range Rover Evoque', year: 2020, mileage: 60000, fuel: 'Diésel', price: 38000, badge: 'Premium', image: '/assets/listing_car.png', aiRating: 'Muy Bueno', estimatedSaving: 5000 }
+    { id: '1', make: 'Tesla', model: 'Model 3 Long Range', year: 2023, mileage: 12500, fuel: 'Eléctrico', price: 45900, badge: 'Recomendado', image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Excelente', estimatedSaving: 4500 },
+    { id: '2', make: 'BMW', model: 'X5 xDrive40i', year: 2021, mileage: 42000, fuel: 'Gasolina', price: 58500, badge: 'Novedad', image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Muy Bueno', estimatedSaving: 3200 },
+    { id: '3', make: 'Audi', model: 'A6 Avant 50 TDI', year: 2020, mileage: 78000, fuel: 'Diésel', price: 39800, image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Bueno', estimatedSaving: 2100 },
+    { id: '4', make: 'Volkswagen', model: 'Golf VIII 1.5 eTSI', year: 2022, mileage: 21000, fuel: 'Híbrido', price: 24500, badge: 'Gran Oportunidad', image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Excelente', estimatedSaving: 2800 },
+    { id: '5', make: 'Mercedes-Benz', model: 'C-Class C220d', year: 2021, mileage: 35000, fuel: 'Diésel', price: 41200, image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Muy Bueno', estimatedSaving: 2500 },
+    { id: '6', make: 'Porsche', model: '911 Carrera 4S', year: 2020, mileage: 18000, fuel: 'Gasolina', price: 118000, badge: 'Garantía Oficial', image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Premium', estimatedSaving: 8900 },
+    { id: '7', make: 'Volvo', model: 'XC60 B4 Inscription', year: 2022, mileage: 28000, fuel: 'Diésel Micro', price: 46900, image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Bueno', estimatedSaving: 3100 },
+    { id: '8', make: 'Audi', model: 'Q5 40 TDI quattro', year: 2021, mileage: 54000, fuel: 'Diésel', price: 42500, badge: 'Oportunidad', image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Excelente', estimatedSaving: 3800 },
+    { id: '9', make: 'Ford', model: 'Mustang Mach-E', year: 2023, mileage: 8000, fuel: 'Eléctrico', price: 52000, image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Muy Bueno', estimatedSaving: 4100 },
+    { id: '10', make: 'Hyundai', model: 'Tucson 1.6 TGDI', year: 2022, mileage: 15000, fuel: 'Híbrido', price: 31500, badge: 'Recomendado', image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Excelente', estimatedSaving: 2900 },
+    { id: '11', make: 'Toyota', model: 'RAV4 Hybrid', year: 2021, mileage: 45000, fuel: 'Híbrido', price: 29900, image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Bueno', estimatedSaving: 1500 },
+    { id: '12', make: 'Land Rover', model: 'Range Rover Evoque', year: 2020, mileage: 60000, fuel: 'Diésel', price: 38000, badge: 'Premium', image: '/AutoImportAI-Proyect/assets/listing_car.png', aiRating: 'Muy Bueno', estimatedSaving: 5000 }
   ];
 
   return (

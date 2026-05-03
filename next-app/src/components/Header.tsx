@@ -7,7 +7,7 @@ export default function Header() {
         {/* Logo Left */}
         <div className="flex-1 flex justify-start">
           <Link href="/" className="flex items-center gap-3 group">
-            <img src="/assets/logo.png" alt="AutoImport Icon" className="h-[42px] w-auto object-contain mix-blend-multiply contrast-150 brightness-110 grayscale opacity-90" />
+            <img src="/AutoImportAI-Proyect/assets/logo.png" alt="AutoImport Icon" className="h-[42px] w-auto object-contain mix-blend-multiply contrast-150 brightness-110 grayscale opacity-90" />
             <div className="flex flex-col justify-center">
               <span className="text-[20px] font-extrabold text-[#2a2420] leading-none mb-1 tracking-tight">AutoImport</span>
               <span className="text-[13px] text-gray-500 font-medium leading-none">Next Gen</span>
