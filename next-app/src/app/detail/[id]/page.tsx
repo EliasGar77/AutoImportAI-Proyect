@@ -28,7 +28,7 @@ Features include:
 - Adaptive Cruise Control`;
 
   return (
-    <div className="bg-bg-color min-h-screen py-8">
+    <div className="bg-bg-color min-h-screen pt-[120px] pb-8">
       <div className="container mx-auto px-5 max-w-[1280px]">
         {/* Breadcrumb */}
         <div className="text-sm text-text-muted mb-6 flex gap-2">
@@ -96,6 +96,27 @@ Features include:
               <h1 className="text-3xl font-extrabold text-text-main mb-2">{make} {modelStr}</h1>
               <div className="text-4xl font-black text-primary mb-6">{price} €</div>
               
+              {/* AI Market Analysis Widget */}
+              <div className="bg-gradient-to-br from-[#2997ff]/10 to-transparent p-5 rounded-xl border border-[#2997ff]/20 mb-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <svg className="w-5 h-5 text-[#2997ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                  <h3 className="font-bold text-[#2997ff]">Auditoría IA de Mercado</h3>
+                </div>
+                <p className="text-sm text-text-muted mb-3 leading-relaxed">
+                  Nuestra IA rastrea en tiempo real. Hemos comparado esta unidad con <strong className="text-text-main">4.250 coches idénticos</strong> en diferentes países de Europa para garantizarte la mejor oportunidad.
+                </p>
+                <div className="space-y-2 pt-2 border-t border-[#2997ff]/10">
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-text-muted font-medium">Ahorro detectado:</span>
+                    <span className="font-bold text-green-600 bg-green-100 px-2 py-0.5 rounded-md">~ 3.450 €</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-text-muted font-medium">Valoración de la IA:</span>
+                    <span className="font-bold text-text-main">Oportunidad Excelente</span>
+                  </div>
+                </div>
+              </div>
+
               <div className="space-y-4">
                 <button className="w-full bg-secondary hover:bg-[#e54b2b] text-white font-bold py-4 rounded-xl text-lg transition-all shadow-md">
                   Send Message

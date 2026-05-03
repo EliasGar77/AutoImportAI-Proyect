@@ -24,9 +24,9 @@ export default function SearchResultsPage() {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
             <span>IA AutoImport Activada</span>
           </div>
-          <h1 className="text-4xl font-extrabold text-text-main tracking-tight mb-3">Coches en Alemania</h1>
+          <h1 className="text-4xl font-extrabold text-text-main tracking-tight mb-3">Resultados del Mercado Europeo</h1>
           <p className="text-base text-text-muted font-medium max-w-2xl mt-1">
-            Nuestra IA ha escaneado 4.250 vehículos que coinciden con tu búsqueda.
+            Nuestra IA escanea y compara en tiempo real miles de vehículos en Alemania, Bélgica y Holanda para ofrecerte solo las mejores oportunidades de compra.
           </p>
           <div className="mt-4">
             <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-surface border border-border-color text-text-main px-3 py-1.5 rounded-full shadow-sm">
@@ -37,7 +37,22 @@ export default function SearchResultsPage() {
         </div>
       </div>
       
-      <div className="w-full max-w-[1400px] mx-auto px-5 py-10 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
+      <div className="w-full max-w-[1400px] mx-auto px-5 pt-8 pb-4">
+        <div className="bg-gradient-to-r from-[#1d1d1f] to-[#2a2a2c] text-white rounded-2xl p-4 flex flex-col md:flex-row items-center justify-between shadow-lg border border-white/10">
+          <div className="flex items-center gap-3">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34c759] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#34c759]"></span>
+            </span>
+            <span className="text-sm font-semibold tracking-wide">Radar Automático Multieuropeo Activo</span>
+          </div>
+          <div className="text-sm text-gray-300 mt-2 md:mt-0 font-medium">
+            Analizando y comparando precios en 12 mercados europeos... <strong className="text-white">Última actualización: hace 2s</strong>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full max-w-[1400px] mx-auto px-5 pb-10 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
         {/* Filters Sidebar */}
         <aside className="hidden lg:block lg:col-span-1">
           <div className="sticky top-24 pr-4">
