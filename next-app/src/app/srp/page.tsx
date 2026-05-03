@@ -19,20 +19,38 @@ export default function SearchResultsPage() {
   return (
     <div className="bg-bg-color min-h-screen">
       <div className="bg-surface border-b border-border-color pt-[120px] pb-12">
-        <div className="container mx-auto px-5 max-w-[1000px] flex flex-col items-center text-center">
+        <div className="container mx-auto px-5 max-w-[800px] flex flex-col items-center text-center">
           <div className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#2997ff]/10 to-[#2997ff]/5 border border-[#2997ff]/20 text-[#2997ff] px-5 py-2 rounded-full text-sm font-semibold mb-5 shadow-sm">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-            <span>IA AutoImport Activada</span>
+            <span>Buscador con Inteligencia Artificial</span>
           </div>
-          <h1 className="text-4xl font-extrabold text-text-main tracking-tight mb-3">Resultados del Mercado Europeo</h1>
-          <p className="text-base text-text-muted font-medium max-w-2xl mt-1">
-            Nuestra IA escanea y compara en tiempo real miles de vehículos en Alemania, Bélgica y Holanda para ofrecerte solo las mejores oportunidades de compra.
+          <h1 className="text-4xl font-extrabold text-text-main tracking-tight mb-3">Dile a nuestra IA qué estás buscando</h1>
+          <p className="text-base text-text-muted font-medium max-w-2xl mt-1 mb-8">
+            Olvida los filtros aburridos. Escribe exactamente el coche que quieres, con tu presupuesto y requisitos, y nuestro algoritmo escaneará Europa por ti.
           </p>
-          <div className="mt-4">
-            <span className="inline-flex items-center gap-1.5 text-xs font-semibold bg-surface border border-border-color text-text-main px-3 py-1.5 rounded-full shadow-sm">
-              <svg className="w-3.5 h-3.5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-              Ahorro Medio Detectado: 3.450 €
-            </span>
+
+          {/* AI Search Prompt Box */}
+          <div className="w-full relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#2997ff] to-[#34c759] rounded-[2rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative bg-white border border-gray-200 rounded-[2rem] shadow-sm flex items-center p-2 focus-within:ring-2 focus-within:ring-[#2997ff]/50 focus-within:border-[#2997ff] transition-all">
+               <div className="pl-4 pr-2 text-[#2997ff]">
+                 <svg className="w-6 h-6 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+               </div>
+               <input 
+                 type="text"
+                 className="w-full bg-transparent border-none focus:outline-none focus:ring-0 text-text-main py-4 px-2 placeholder-gray-400 font-medium text-lg h-[60px]"
+                 placeholder="Ej: Quiero un SUV híbrido de menos de 35.000€..."
+               />
+               <button className="bg-[#1d1d1f] hover:bg-black text-white p-4 rounded-full transition-colors flex items-center justify-center mr-1 shadow-md hover:scale-105 transform">
+                 <svg className="w-5 h-5 transform rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
+               </button>
+            </div>
+            {/* Suggested prompts */}
+            <div className="flex flex-wrap justify-center gap-2 mt-5">
+              <span className="text-xs text-text-muted bg-white hover:bg-gray-50 cursor-pointer px-4 py-2 rounded-full transition-colors border border-border-color font-semibold shadow-sm">✨ Deportivo gasolina &lt; 40k</span>
+              <span className="text-xs text-text-muted bg-white hover:bg-gray-50 cursor-pointer px-4 py-2 rounded-full transition-colors border border-border-color font-semibold shadow-sm">✨ Coche familiar con gran maletero</span>
+              <span className="text-xs text-text-muted bg-white hover:bg-gray-50 cursor-pointer px-4 py-2 rounded-full transition-colors border border-border-color font-semibold shadow-sm">✨ Eléctrico premium con más ahorro</span>
+            </div>
           </div>
         </div>
       </div>
