@@ -2,7 +2,7 @@ export default function SimuladorPage() {
   return (
     <div className="bg-background min-h-screen pb-24">
       {/* Header */}
-      <div className="bg-surface border-b border-border-color pt-16 pb-12 text-center">
+      <div className="bg-surface border-b border-border-color pt-[140px] pb-12 text-center">
         <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4 tracking-tight">
           Simulador de Importación
         </h1>
