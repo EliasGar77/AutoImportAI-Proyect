@@ -20,6 +20,7 @@ export default function Header() {
           <Link href="/srp" className="text-[15px] text-gray-600 font-semibold hover:text-black transition-colors">Buscar Coches</Link>
           <Link href="/simulador" className="text-[15px] text-gray-600 font-semibold hover:text-black transition-colors">Simulador</Link>
           <Link href="/proceso" className="text-[15px] text-gray-600 font-semibold hover:text-black transition-colors">Cómo Funciona</Link>
+          <Link href="/planes" className="text-[15px] text-gray-600 font-semibold hover:text-black transition-colors">Packs y Precios</Link>
         </nav>
 
         {/* Buttons Right */}
