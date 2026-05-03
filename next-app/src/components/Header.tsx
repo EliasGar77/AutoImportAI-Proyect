@@ -19,7 +19,7 @@ export default function Header() {
         <nav className="hidden md:flex flex-1 justify-center gap-10">
           <Link href="/srp" className="text-[15px] text-gray-600 font-semibold hover:text-black transition-colors">Buscar Coches</Link>
           <Link href="/simulador" className="text-[15px] text-gray-600 font-semibold hover:text-black transition-colors">Simulador</Link>
-          <Link href="/planes" className="text-[15px] text-gray-600 font-semibold hover:text-black transition-colors">Cómo Funciona</Link>
+          <Link href="/proceso" className="text-[15px] text-gray-600 font-semibold hover:text-black transition-colors">Cómo Funciona</Link>
         </nav>
 
         {/* Buttons Right */}
