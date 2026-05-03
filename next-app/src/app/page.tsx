@@ -142,8 +142,6 @@ export default function Home() {
         </div>
       </section>
 
-      </section>
-
       {/* Success Stories / Testimonials */}
       <section className="bg-white py-24 mt-10">
         <div className="container mx-auto px-5 max-w-[1280px]">
