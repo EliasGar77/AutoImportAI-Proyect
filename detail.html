@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Insights | Mobile.de Clone</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Detail Page Styles */
+    .detail-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+    
+    .gallery {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+    .main-img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+    .thumbnail-list {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.5rem;
+      background: #f8fafc;
+    }
+    .thumbnail {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: var(--radius-sm);
+      border: 2px solid transparent;
+    }
+    .thumbnail:hover {
+      border-color: var(--primary);
+    }
+
+    .specs-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-color);
+    }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .spec-label {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+    .spec-value {
+      font-weight: 600;
+    }
+
+    /* Floating Widget Box */
+    .action-widget {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+      position: sticky;
+      top: 90px;
+      border: 1px solid var(--border-color);
+    }
+    .price-tag {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .urgency-banner {
+      background: rgba(245, 158, 11, 0.1);
+      color: var(--warning);
+      padding: 0.75rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .seller-info {
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      margin: 1.5rem 0;
+    }
+    .seller-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+    .seller-name {
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+    .trust-badge {
+      color: var(--success);
+      font-weight: 600;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    @media(max-width: 960px) {
+      .detail-layout { grid-template-columns: 1fr; }
+      .action-widget { position: static; }
+      .main-img { height: 350px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container flex justify-between items-center h-full">
+      <a href="index.html" class="logo">Mobile<span>.de</span></a>
+      <nav class="nav-links">
+        <a href="srp.html">Buy a Car</a>
+        <a href="sell.html">Sell Your Car</a>
+      </nav>
+      <div class="user-actions">
+        <a href="sell.html" class="btn btn-secondary" style="padding: 0.5rem 1rem;">List Car</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container detail-layout" id="car-detail-container">
+    <!-- Populated by JS -->
+    <div style="text-align:center; padding: 4rem;">Loading...</div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('car-detail-container');
+      const urlParams = new URLSearchParams(window.location.search);
+      const carId = parseInt(urlParams.get('id')) || 1; // Default to first car if none given
+      
+      const car = window.db.cars.find(c => c.id === carId);
+
+      if(!car) {
+        container.innerHTML = '<h2>Car not found. <a href="srp.html">Return to search</a></h2>';
+        return;
+      }
+
+      container.innerHTML = `
+        <div class="main-content">
+          <div class="gallery">
+            <img src="${car.image}" alt="${car.make}" class="main-img" id="main-img">
+            <div class="thumbnail-list">
+              <img src="${car.image}" class="thumbnail" onclick="document.getElementById('main-img').src=this.src">
+            </div>
+          </div>
+
+          <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">${car.make} ${car.model}</h1>
+          <p class="text-muted" style="margin-bottom: 2rem;">${car.location} • Registration: ${car.year}</p>
+
+          <div class="specs-card">
+            <h2 class="mb-4 text-xl font-bold">Vehicle Details</h2>
+            <div class="specs-grid">
+              <div class="spec-item"><span class="spec-label">Mileage</span><span class="spec-value">${window.db.formatNumber(car.mileage)} km</span></div>
+              <div class="spec-item"><span class="spec-label">Fuel Type</span><span class="spec-value">${car.fuel}</span></div>
+              <div class="spec-item"><span class="spec-label">Transmission</span><span class="spec-value">${car.transmission}</span></div>
+              <div class="spec-item"><span class="spec-label">First Registration</span><span class="spec-value">${car.year}</span></div>
+            </div>
+            
+            <h3 class="mt-8 mb-2 font-bold">Features & Equipment</h3>
+            <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+              ${car.features.map(f => `<li>✓ ${f}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+
+        <aside class="sidebar">
+          <div class="action-widget">
+            <div class="price-tag">${window.db.formatPrice(car.price)}</div>
+            
+            <div class="urgency-banner">
+              🔥 14 people are viewing this car right now
+            </div>
+
+            <div class="cta-group">
+              <button class="btn btn-secondary w-full" style="width: 100%; font-size: 1.125rem;">Contact Seller</button>
+              <button class="btn btn-outline w-full" style="width: 100%;">Call +49 151 *** ****</button>
+              <button class="btn btn-outline w-full" style="width: 100%; border-color:#cbd5e1; color: var(--text-main);">❤️ Save Listing</button>
+            </div>
+
+            <div class="seller-info">
+              <div class="seller-header">
+                <span class="seller-name">${car.sellerName}</span>
+                <span class="trust-badge">✓ Verified ${car.sellerType}</span>
+              </div>
+              <div class="text-muted">⭐ ${car.sellerRating} / 5.0 rating</div>
+            </div>
+            
+            <div class="text-sm text-center text-muted">
+              Financing available from 3.99% p.a.
+            </div>
+          </div>
+        </aside>
+      `;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile.de Clone | Premium Car Marketplace</title>
+  <meta name="description" content="Find your dream car on the leading premium car marketplace.">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Homepage Specific Styles */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, #0A192F 0%, #06101D 100%);
+      color: white;
+      padding: 6rem 0 8rem;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background-image: url('assets/hero_car.png');
+      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
+      opacity: 0.4;
+      z-index: 1;
+      mask-image: linear-gradient(to right, transparent, black 80%);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 80%);
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      max-width: 600px;
+      line-height: 1.1;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      color: #94a3b8;
+      max-width: 500px;
+      margin-bottom: 2rem;
+    }
+
+    .search-panel {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      max-width: 900px;
+      color: var(--text-main);
+      margin-top: 2rem;
+    }
+    .search-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .trust-bar {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      padding: 2rem 0;
+      background: white;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .trust-item strong {
+      font-size: 1.5rem;
+      color: var(--primary);
+      font-weight: 800;
+    }
+    .trust-item span {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .listings-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .car-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .car-card-img {
+      position: relative;
+      padding-top: 60%;
+      background-color: #f1f5f9;
+      overflow: hidden;
+    }
+    .car-card-img img {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-normal);
+    }
+    .car-card:hover .car-card-img img {
+      transform: scale(1.05);
+    }
+    .car-badge {
+      position: absolute;
+      top: 1rem; left: 1rem;
+      z-index: 2;
+    }
+    .car-card-content {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .car-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+      color: var(--text-main);
+    }
+    .car-specs {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .car-price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-top: auto;
+    }
+
+    .promo-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      color: white;
+      text-align: center;
+      margin: 4rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .promo-banner h2 { margin-bottom: 1rem; font-size: 2.5rem; }
+    .promo-banner p { margin-bottom: 2rem; font-size: 1.125rem; opacity: 0.9; }
+
+    @media(max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .trust-bar { flex-direction: column; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container flex justify-between items-center h-full">
+      <a href="index.html" class="logo">Mobile<span>.de</span></a>
+      <nav class="nav-links">
+        <a href="srp.html">Buy a Car</a>
+        <a href="sell.html">Sell Your Car</a>
+        <a href="#">Finance</a>
+      </nav>
+      <div class="user-actions">
+        <a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem;">Login</a>
+        <a href="sell.html" class="btn btn-secondary" style="padding: 0.5rem 1rem;">List Car</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Find your next dream car instantly.</h1>
+      <p>Search over 1.5 million cars across Europe with transparent pricing and verified dealers.</p>
+      
+      <!-- Search Form -->
+      <form action="srp.html" class="search-panel">
+        <div class="search-grid">
+          <div class="input-group">
+            <label for="make">Make</label>
+            <select id="make">
+              <option value="">Any Make</option>
+              <option value="audi">Audi</option>
+              <option value="bmw">BMW</option>
+              <option value="mercedes">Mercedes-Benz</option>
+              <option value="tesla">Tesla</option>
+              <option value="vw">Volkswagen</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="model">Model</label>
+            <select id="model" disabled>
+              <option value="">Select Make First</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="price">Max Price (€)</label>
+            <select id="price">
+              <option value="">Any Price</option>
+              <option value="10000">10,000 €</option>
+              <option value="20000">20,000 €</option>
+              <option value="50000">50,000 €</option>
+              <option value="100000">100,000 €</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="location">City or ZIP</label>
+            <input type="text" id="location" placeholder="e.g. 10115 Berlin">
+          </div>
+        </div>
+        <div class="mt-4 flex justify-between items-center">
+          <a href="srp.html" class="text-primary font-bold">Advanced Search</a>
+          <button type="submit" class="btn btn-primary" style="min-width: 200px;">Search Cars</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar container">
+    <div class="trust-item">
+      <strong>1.5M+</strong>
+      <span>Cars Available</span>
+    </div>
+    <div class="trust-item">
+      <strong>45,000+</strong>
+      <span>Verified Dealers</span>
+    </div>
+    <div class="trust-item">
+      <strong>24/7</strong>
+      <span>Support & Buyer Protection</span>
+    </div>
+  </div>
+
+  <!-- Featured Listings -->
+  <section class="container mt-8" style="padding-top: 4rem;">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="section-title mb-0">Featured Listings</h2>
+      <a href="srp.html" class="font-bold text-primary">View All →</a>
+    </div>
+    <div class="listings-grid" id="homepage-listings">
+      <!-- Cards rendered via JS -->
+    </div>
+  </section>
+
+  <!-- Sell CTA -->
+  <section class="container">
+    <div class="promo-banner">
+      <h2>Thinking of selling?</h2>
+      <p>Get a free AI price estimation instantly and list your car to millions of buyers.</p>
+      <a href="sell.html" class="btn btn-secondary" style="font-size: 1.125rem; padding: 1rem 2rem;">Sell My Car Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Mobile.de</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Buyers</h4>
+          <ul>
+            <li><a href="srp.html">Advanced Search</a></li>
+            <li><a href="#">Car Reviews</a></li>
+            <li><a href="#">Financing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>For Sellers</h4>
+          <ul>
+            <li><a href="sell.html">Private Selling</a></li>
+            <li><a href="#">Dealer Dashboard</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Imprint</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Mobile.de Clone - Built for Demonstration.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Render Featured Cards
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('homepage-listings');
+      // Render first 4 cars
+      const featuredCars = window.db.cars.slice(0, 4);
+      
+      let html = '';
+      featuredCars.forEach(car => {
+        const badgeHtml = car.badge ? `<span class="badge badge-success car-badge">${car.badge}</span>` : '';
+        html += `
+          <a href="detail.html?id=${car.id}" class="card car-card">
+            <div class="car-card-img">
+              ${badgeHtml}
+              <img src="${car.image}" alt="${car.make} ${car.model}">
+            </div>
+            <div class="car-card-content">
+              <h3 class="car-title">${car.make} ${car.model}</h3>
+              <div class="car-specs">
+                ${car.year} • ${window.db.formatNumber(car.mileage)} km • ${car.fuel}
+              </div>
+              <div class="car-price">${window.db.formatPrice(car.price)}</div>
+            </div>
+          </a>
+        `;
+      });
+      container.innerHTML = html;
+    });
+  </script>
+</body>
+</html>
