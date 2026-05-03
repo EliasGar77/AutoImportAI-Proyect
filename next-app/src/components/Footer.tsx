@@ -24,8 +24,9 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link href="/srp" className="text-[#9ca3af] hover:text-white transition-colors">Buscar Coches</Link></li>
               <li><Link href="/simulador" className="text-[#9ca3af] hover:text-white transition-colors">Simulador Llave en Mano</Link></li>
+              <li><Link href="/proceso" className="text-[#9ca3af] hover:text-white transition-colors">El Proceso</Link></li>
               <li><Link href="/planes" className="text-[#9ca3af] hover:text-white transition-colors">Nuestros Packs</Link></li>
-              <li><Link href="#" className="text-[#9ca3af] hover:text-white transition-colors">Garantía AutoImport</Link></li>
+              <li><Link href="/dashboard" className="text-[#9ca3af] hover:text-white transition-colors">Área Clientes</Link></li>
             </ul>
           </div>
           <div>
