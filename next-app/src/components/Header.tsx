@@ -31,9 +31,9 @@ export default function Header() {
           
           <div className="w-[1px] h-4 bg-gray-200 mx-1 hidden sm:block"></div>
 
-          <button className="text-[13px] font-bold text-gray-500 hover:text-black transition-colors hidden sm:block">
+          <Link href="/dashboard" className="text-[13px] font-bold text-gray-500 hover:text-black transition-colors hidden sm:block">
             Acceder
-          </button>
+          </Link>
           <Link href="/simulador" className="px-5 py-2 text-[13px] font-bold text-white bg-[#1d1d1f] rounded-full hover:bg-[#2997ff] hover:shadow-[0_4px_15px_rgba(41,151,255,0.4)] transition-all hover:-translate-y-0.5">
             Empezar
           </Link>
