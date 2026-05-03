@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function PlanesPage() {
   return (
-    <div className="bg-background min-h-screen flex flex-col items-center pt-32 pb-16">
+    <div className="bg-background min-h-screen flex flex-col items-center pt-[140px] pb-16">
       {/* Header Section */}
       <div className="text-center px-5 max-w-[700px] mb-12">
         <h1 className="text-4xl md:text-5xl font-extrabold text-[#1d1d1f] mb-4 tracking-tight leading-tight">
