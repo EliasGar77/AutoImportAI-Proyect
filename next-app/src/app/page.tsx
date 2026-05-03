@@ -15,7 +15,7 @@ export default function Home() {
       <Hero />
 
       {/* AI Features Section */}
-      <section className="bg-white py-24 border-b border-border-color">
+      <section className="bg-white py-24 border-b border-border-color overflow-hidden">
         <div className="container mx-auto px-5 max-w-[1200px]">
           <div className="text-center mb-16">
              <div className="inline-flex items-center justify-center gap-2 bg-[#2997ff]/10 text-[#2997ff] px-4 py-1.5 rounded-full text-sm font-bold mb-4">
@@ -23,43 +23,108 @@ export default function Home() {
                 Tecnología Exclusiva
              </div>
              <h2 className="text-4xl md:text-5xl font-extrabold text-text-main tracking-tight mb-4">
-                Un importador que no duerme.
+                Un importador que <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2997ff] to-[#34c759]">no duerme.</span>
              </h2>
              <p className="text-lg text-text-muted max-w-2xl mx-auto">
                 Nuestra Inteligencia Artificial analiza el mercado europeo 24/7 para garantizarte compras seguras y con el máximo margen de ahorro.
              </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-             <div className="bg-[#f5f5f7] p-8 rounded-3xl border border-transparent hover:border-gray-200 transition-all">
-                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 text-[#2997ff]">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" /></svg>
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+             {/* Left: Cards */}
+             <div className="lg:w-1/2 space-y-6">
+                <div className="bg-[#f5f5f7] p-8 rounded-3xl border border-transparent hover:border-[#2997ff]/30 transition-all hover:shadow-[0_8px_30px_rgba(41,151,255,0.1)] group">
+                  <div className="flex items-center gap-5 mb-4">
+                     <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm text-[#2997ff] group-hover:scale-110 transition-transform">
+                       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" /></svg>
+                     </div>
+                     <h3 className="text-xl font-bold text-text-main">Escaneo Radar 360º</h3>
+                  </div>
+                  <p className="text-text-muted text-[15px] leading-relaxed">
+                    Rastreamos simultáneamente más de 5 millones de vehículos en Alemania, Holanda, y Bélgica buscando el algoritmo perfecto de depreciación.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-text-main">Escaneo Radar 360º</h3>
-                <p className="text-text-muted text-sm leading-relaxed">
-                  Rastreamos simultáneamente más de 5 millones de vehículos en Alemania, Holanda, Bélgica y Francia buscando el algoritmo perfecto de depreciación.
-                </p>
-             </div>
-             
-             <div className="bg-gradient-to-b from-[#1d1d1f] to-[#2a2a2c] text-white p-8 rounded-3xl shadow-xl transform md:-translate-y-4 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#2997ff] opacity-20 rounded-full blur-3xl"></div>
-                <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md mb-6 text-[#34c759] border border-white/10">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                
+                <div className="bg-[#f5f5f7] p-8 rounded-3xl border border-transparent hover:border-[#34c759]/30 transition-all hover:shadow-[0_8px_30px_rgba(52,199,89,0.1)] group">
+                  <div className="flex items-center gap-5 mb-4">
+                     <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm text-[#34c759] group-hover:scale-110 transition-transform">
+                       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                     </div>
+                     <h3 className="text-xl font-bold text-text-main">Antifraude Biométrico</h3>
+                  </div>
+                  <p className="text-text-muted text-[15px] leading-relaxed">
+                    La IA detecta patrones sospechosos, verifica el historial del VIN y cruza datos de accidentes para asegurar que el vendedor es 100% fiable.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold mb-3">Antifraude Biométrico</h3>
-                <p className="text-gray-300 text-sm leading-relaxed font-medium">
-                  La IA detecta patrones sospechosos, verifica el historial del VIN y cruza datos de accidentes para asegurar que el vendedor es 100% fiable.
-                </p>
+
+                <div className="bg-[#f5f5f7] p-8 rounded-3xl border border-transparent hover:border-purple-500/30 transition-all hover:shadow-[0_8px_30px_rgba(168,85,247,0.1)] group">
+                  <div className="flex items-center gap-5 mb-4">
+                     <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm text-purple-500 group-hover:scale-110 transition-transform">
+                       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                     </div>
+                     <h3 className="text-xl font-bold text-text-main">Cálculo Llave en Mano</h3>
+                  </div>
+                  <p className="text-text-muted text-[15px] leading-relaxed">
+                    Olvídate de hacer números. Calculamos instantáneamente impuestos, CO2, transporte y matriculación para darte el precio final exacto en España.
+                  </p>
+                </div>
              </div>
 
-             <div className="bg-[#f5f5f7] p-8 rounded-3xl border border-transparent hover:border-gray-200 transition-all">
-                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 text-[#2997ff]">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+             {/* Right: Mock Terminal/Live Action */}
+             <div className="lg:w-1/2 w-full relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#2997ff] to-[#34c759] rounded-[2.5rem] blur-2xl opacity-30 animate-pulse"></div>
+                <div className="bg-[#0f1115] rounded-3xl border border-white/10 shadow-2xl overflow-hidden relative z-10 w-full flex flex-col">
+                   {/* Terminal Header */}
+                   <div className="bg-[#1a1d24] px-4 py-3 flex items-center gap-2 border-b border-white/5">
+                      <div className="flex gap-1.5">
+                        <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      </div>
+                      <span className="text-xs text-gray-500 font-mono ml-4">autoimport-ai-core v2.4.1</span>
+                   </div>
+                   
+                   {/* Terminal Body */}
+                   <div className="p-6 md:p-8 font-mono text-[13px] md:text-sm text-gray-300 flex-1 overflow-hidden relative space-y-4">
+                      <div className="space-y-2 opacity-90">
+                         <p className="text-[#2997ff] flex items-center gap-2 font-bold">
+                           <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                           > Initializing search algorithm...
+                         </p>
+                         <p className="text-gray-400">> Fetching mobile.de, autoscout24, and dealer networks...</p>
+                         <p className="text-gray-400">> Found: <span className="text-white font-bold">5,402,198</span> vehicles.</p>
+                      </div>
+                      
+                      <div className="h-px w-full bg-white/10 my-4"></div>
+                      
+                      <div className="space-y-2">
+                         <p className="text-[#34c759]">> Applying user criteria: Audi A6 Avant, Diesel, &lt;80k km</p>
+                         <p className="text-gray-400">> Pre-filtering... [4,201 matches]</p>
+                         <p className="text-yellow-400">> Running VIN fraud check... <span className="text-red-400 line-through">1,402 rejected (accidents)</span></p>
+                         <p className="text-gray-400">> Calculating Spanish taxes (CO2 emissions)... Done.</p>
+                      </div>
+                      
+                      <div className="h-px w-full bg-white/10 my-4"></div>
+                      
+                      <div>
+                         <p className="text-[#2997ff] font-bold mb-3">> PERFECT MATCH FOUND:</p>
+                         <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                            <div className="flex justify-between items-center mb-2">
+                               <span className="text-white font-bold text-base">Audi A6 Avant 50 TDI</span>
+                               <span className="bg-[#34c759]/20 text-[#34c759] px-2 py-1 rounded text-xs font-bold border border-[#34c759]/30">Ahorro: 4.850€</span>
+                            </div>
+                            <span className="text-gray-400 text-xs flex items-center gap-1">
+                               <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                               Munich (Alemania) | Riesgo: 0%
+                            </span>
+                         </div>
+                         <p className="mt-4 flex items-center gap-2">
+                           <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
+                           <span className="text-gray-500">Awaiting user action...</span>
+                         </p>
+                      </div>
+                   </div>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-text-main">Cálculo Llave en Mano</h3>
-                <p className="text-text-muted text-sm leading-relaxed">
-                  Olvídate de hacer números. Calculamos instantáneamente impuestos, CO2, transporte y matriculación para darte el precio final exacto en España.
-                </p>
              </div>
           </div>
         </div>
