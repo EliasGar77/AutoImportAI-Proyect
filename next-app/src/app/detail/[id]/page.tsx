@@ -176,6 +176,31 @@ Features include:
                 </p>
               </div>
 
+              {/* Carfax Report Generator */}
+              <div className="mt-6 bg-[#1d1d1f] rounded-xl p-5 border border-white/10 relative overflow-hidden shadow-lg">
+                <div className="absolute -right-4 -top-4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl"></div>
+                
+                <div className="relative z-10">
+                  <div className="flex items-center gap-2 mb-2">
+                    <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                    <h3 className="text-white font-bold text-sm">Historial CARFAX Automático</h3>
+                  </div>
+                  <p className="text-gray-400 text-xs mb-4 leading-relaxed">
+                    Genera el informe oficial de accidentes, cargas y kilometraje al instante con un solo clic.
+                  </p>
+                  
+                  <button className="w-full bg-white text-black font-bold py-2.5 rounded-lg text-sm hover:bg-gray-100 transition-colors shadow-sm flex items-center justify-center gap-2">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                    Desbloquear Informe
+                  </button>
+                  
+                  <div className="mt-3 flex justify-between items-center text-[11px] text-gray-500 border-t border-white/10 pt-2">
+                    <span>Plan Premium Activo</span>
+                    <span className="text-white font-semibold">Te quedan 2/5 Carfax este mes</span>
+                  </div>
+                </div>
+              </div>
+
               <div className="mt-8 pt-6 border-t border-border-color">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="font-bold text-lg">Dealer Information</h3>
