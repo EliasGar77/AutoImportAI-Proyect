@@ -73,30 +73,82 @@ export default function SearchResultsPage() {
       <div className="w-full max-w-[1400px] mx-auto px-5 pb-10 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
         {/* Filters Sidebar */}
         <aside className="hidden lg:block lg:col-span-1">
-          <div className="sticky top-24 pr-4">
-             <div className="flex items-center gap-2 mb-4 pb-4 border-b border-border-color">
-               <svg className="w-4 h-4 text-text-muted" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg>
-               <h2 className="font-semibold text-sm text-text-muted uppercase tracking-wider">Filtros Inteligentes</h2>
-             </div>
-             <div className="space-y-5">
-               <div>
-                 <label className="text-xs font-semibold mb-1.5 block text-text-main">Filtro IA AutoImport</label>
-                 <select className="w-full p-2 text-sm border border-border-color rounded-lg bg-surface focus:outline-none focus:border-border-color transition-colors">
-                   <option>Mayor Ahorro Estimado</option>
-                   <option>Menor Depreciación</option>
-                   <option>Mejor Estado General</option>
-                 </select>
-               </div>
-               <div>
-                 <label className="text-xs font-semibold mb-1.5 block text-text-main">Marca y Modelo</label>
-                 <select className="w-full p-2 text-sm border border-border-color rounded-lg bg-surface focus:outline-none focus:border-border-color transition-colors"><option>Todas las marcas</option></select>
-               </div>
-               <div>
-                 <label className="text-xs font-semibold mb-1.5 block text-text-main">Presupuesto Máximo</label>
-                 <select className="w-full p-2 text-sm border border-border-color rounded-lg bg-surface focus:outline-none focus:border-border-color transition-colors"><option>Cualquier precio</option></select>
-               </div>
-               <button className="w-full bg-background text-text-main text-sm font-semibold py-2 rounded-lg border border-border-color hover:bg-surface transition-all mt-2">Aplicar</button>
-             </div>
+          <div className="sticky top-24">
+            <div className="bg-[#1d1d1f] rounded-3xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-white/5 relative overflow-hidden">
+              {/* Glow effect */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#2997ff] opacity-10 rounded-full blur-3xl"></div>
+              
+              <div className="flex items-center gap-2 mb-6 pb-4 border-b border-white/10 relative z-10">
+                <svg className="w-5 h-5 text-[#2997ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" /></svg>
+                <h2 className="font-bold text-sm text-white uppercase tracking-wider">Panel de Control IA</h2>
+              </div>
+
+              <div className="space-y-6 relative z-10">
+                {/* AI Algorithm Target */}
+                <div>
+                  <label className="text-xs font-bold mb-3 block text-gray-400 uppercase tracking-wide">Objetivo del Algoritmo</label>
+                  <div className="space-y-2">
+                    <button className="w-full flex items-center justify-between bg-[#2997ff]/20 border border-[#2997ff]/50 rounded-xl p-3 text-left transition-colors">
+                      <span className="text-[#2997ff] font-bold text-sm">Maximizar Ahorro</span>
+                      <svg className="w-4 h-4 text-[#2997ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                    </button>
+                    <button className="w-full flex items-center justify-between bg-white/5 border border-transparent hover:border-white/10 rounded-xl p-3 text-left transition-colors group">
+                      <span className="text-gray-300 font-semibold text-sm group-hover:text-white transition-colors">Menor Kilometraje</span>
+                    </button>
+                    <button className="w-full flex items-center justify-between bg-white/5 border border-transparent hover:border-white/10 rounded-xl p-3 text-left transition-colors group">
+                      <span className="text-gray-300 font-semibold text-sm group-hover:text-white transition-colors">Reventa a Futuro</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Anti-fraud */}
+                <div>
+                  <label className="text-xs font-bold mb-3 block text-gray-400 uppercase tracking-wide">Nivel de Seguridad</label>
+                  <div className="bg-white/5 rounded-xl p-4 border border-white/10 hover:border-white/20 transition-colors">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-bold text-white">Filtro Antifraude</span>
+                      {/* Toggle Switch */}
+                      <div className="w-10 h-6 bg-[#34c759] rounded-full p-1 cursor-pointer shadow-inner">
+                        <div className="w-4 h-4 bg-white rounded-full shadow-md transform translate-x-4 transition-transform"></div>
+                      </div>
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed">Descarta automáticamente coches con historial de accidentes (Carfax/VIN)</p>
+                  </div>
+                </div>
+
+                {/* Filters */}
+                <div>
+                  <label className="text-xs font-bold mb-3 block text-gray-400 uppercase tracking-wide">Filtros Base</label>
+                  <div className="space-y-3">
+                    <div className="relative">
+                      <select className="w-full p-3 text-sm border border-white/10 rounded-xl bg-[#0f1115] text-white focus:outline-none focus:border-[#2997ff] transition-colors appearance-none cursor-pointer">
+                        <option>Todas las Marcas</option>
+                        <option>Audi</option>
+                        <option>BMW</option>
+                        <option>Mercedes-Benz</option>
+                        <option>Tesla</option>
+                      </select>
+                      <svg className="w-4 h-4 text-gray-400 absolute right-3 top-3.5 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                    </div>
+                    <div className="relative">
+                      <select className="w-full p-3 text-sm border border-white/10 rounded-xl bg-[#0f1115] text-white focus:outline-none focus:border-[#2997ff] transition-colors appearance-none cursor-pointer">
+                        <option>Sin límite de precio</option>
+                        <option>Hasta 30.000 €</option>
+                        <option>Hasta 50.000 €</option>
+                        <option>Hasta 80.000 €</option>
+                      </select>
+                      <svg className="w-4 h-4 text-gray-400 absolute right-3 top-3.5 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Action */}
+                <button className="w-full bg-gradient-to-r from-[#2997ff] to-blue-600 text-white text-sm font-bold py-3.5 rounded-xl shadow-[0_4px_15px_rgba(41,151,255,0.3)] hover:shadow-[0_4px_25px_rgba(41,151,255,0.5)] transition-all hover:-translate-y-0.5 flex items-center justify-center gap-2 mt-4">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>
+                  Recalcular Búsqueda
+                </button>
+              </div>
+            </div>
           </div>
         </aside>
 
