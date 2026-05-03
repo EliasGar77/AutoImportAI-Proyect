@@ -81,6 +81,41 @@ Features include:
               </div>
             </div>
 
+            {/* AI Executive Summary */}
+            <div className="bg-surface rounded-2xl p-6 md:p-8 shadow-sm border border-[#34c759]/30 border-l-4 border-l-[#34c759]">
+              <div className="flex items-center gap-2 mb-5">
+                <svg className="w-6 h-6 text-[#34c759]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <h2 className="text-2xl font-bold text-text-main">Resumen Ejecutivo IA</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                 <div className="space-y-3">
+                    <h3 className="text-xs font-bold text-[#34c759] uppercase tracking-wider">Lo más destacado</h3>
+                    <ul className="space-y-2 text-sm text-text-main font-medium">
+                       <li className="flex gap-2 items-start">
+                         <span className="text-[#34c759]">✓</span> Único propietario certificado
+                       </li>
+                       <li className="flex gap-2 items-start">
+                         <span className="text-[#34c759]">✓</span> Equipamiento Premium (Matrix LED)
+                       </li>
+                       <li className="flex gap-2 items-start">
+                         <span className="text-[#34c759]">✓</span> Historial de mantenimiento impecable
+                       </li>
+                    </ul>
+                 </div>
+                 <div className="space-y-3">
+                    <h3 className="text-xs font-bold text-orange-500 uppercase tracking-wider">A tener en cuenta</h3>
+                    <ul className="space-y-2 text-sm text-text-main font-medium">
+                       <li className="flex gap-2 items-start">
+                         <span className="text-orange-500">⚠</span> Mantenimiento de los 20.000km próximo
+                       </li>
+                       <li className="flex gap-2 items-start">
+                         <span className="text-orange-500">⚠</span> Neumáticos al 40% de vida útil
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+            </div>
+
             {/* Description */}
             <div className="bg-surface rounded-2xl p-6 md:p-8 shadow-sm border border-border-color">
                <h2 className="text-2xl font-bold text-text-main mb-4">Description</h2>
@@ -126,12 +161,37 @@ Features include:
                 </button>
               </div>
 
+              {/* Import Cost Breakdown */}
+              <div className="mt-6 bg-[#f5f5f7] rounded-xl p-4 border border-border-color">
+                <div className="flex justify-between items-center text-sm font-semibold text-text-main mb-1">
+                   <span className="flex items-center gap-1.5">
+                     <svg className="w-4 h-4 text-[#2997ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                     Importación "Llave en mano"
+                   </span>
+                   <span className="text-[#2997ff]">+ 1.250 € est.</span>
+                </div>
+                <p className="text-xs text-text-muted mt-2">
+                   Incluye transporte a España, matriculación, ITV, gestión y honorarios. 
+                   <span className="block mt-1 text-text-main font-bold">Precio final en España: {price === '500' ? '1.750' : price === '35,900' ? '37.150' : '43.250'} €</span>
+                </p>
+              </div>
+
               <div className="mt-8 pt-6 border-t border-border-color">
-                <h3 className="font-bold text-lg mb-2">Dealer Information</h3>
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="font-bold text-lg">Dealer Information</h3>
+                  {/* Trust Score Badge */}
+                  <div className="bg-green-50 border border-green-200 text-green-700 px-2.5 py-1 rounded-md flex items-center gap-1.5 shadow-sm">
+                    <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                    <span className="text-xs font-bold">100% Verificado</span>
+                  </div>
+                </div>
                 <p className="font-semibold">Premium Cars GmbH</p>
                 <p className="text-sm text-text-muted mb-4">Berlin, Germany</p>
                 <div className="flex gap-1 text-warning mb-2">
                   ★ ★ ★ ★ ★ <span className="text-text-muted ml-2">(42 reviews)</span>
+                </div>
+                <div className="text-xs text-text-muted mt-3 bg-surface p-3 rounded-lg border border-border-color">
+                  Historial del vendedor auditado por IA. Probabilidad de fraude: <strong>0.0%</strong>. Perfil seguro.
                 </div>
               </div>
             </div>
