@@ -14,6 +14,56 @@ export default function Home() {
     <>
       <Hero />
 
+      {/* AI Features Section */}
+      <section className="bg-white py-24 border-b border-border-color">
+        <div className="container mx-auto px-5 max-w-[1200px]">
+          <div className="text-center mb-16">
+             <div className="inline-flex items-center justify-center gap-2 bg-[#2997ff]/10 text-[#2997ff] px-4 py-1.5 rounded-full text-sm font-bold mb-4">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                Tecnología Exclusiva
+             </div>
+             <h2 className="text-4xl md:text-5xl font-extrabold text-text-main tracking-tight mb-4">
+                Un importador que no duerme.
+             </h2>
+             <p className="text-lg text-text-muted max-w-2xl mx-auto">
+                Nuestra Inteligencia Artificial analiza el mercado europeo 24/7 para garantizarte compras seguras y con el máximo margen de ahorro.
+             </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+             <div className="bg-[#f5f5f7] p-8 rounded-3xl border border-transparent hover:border-gray-200 transition-all">
+                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 text-[#2997ff]">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" /></svg>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-text-main">Escaneo Radar 360º</h3>
+                <p className="text-text-muted text-sm leading-relaxed">
+                  Rastreamos simultáneamente más de 5 millones de vehículos en Alemania, Holanda, Bélgica y Francia buscando el algoritmo perfecto de depreciación.
+                </p>
+             </div>
+             
+             <div className="bg-gradient-to-b from-[#1d1d1f] to-[#2a2a2c] text-white p-8 rounded-3xl shadow-xl transform md:-translate-y-4 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#2997ff] opacity-20 rounded-full blur-3xl"></div>
+                <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-md mb-6 text-[#34c759] border border-white/10">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                </div>
+                <h3 className="text-xl font-bold mb-3">Antifraude Biométrico</h3>
+                <p className="text-gray-300 text-sm leading-relaxed font-medium">
+                  La IA detecta patrones sospechosos, verifica el historial del VIN y cruza datos de accidentes para asegurar que el vendedor es 100% fiable.
+                </p>
+             </div>
+
+             <div className="bg-[#f5f5f7] p-8 rounded-3xl border border-transparent hover:border-gray-200 transition-all">
+                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 text-[#2997ff]">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-text-main">Cálculo Llave en Mano</h3>
+                <p className="text-text-muted text-sm leading-relaxed">
+                  Olvídate de hacer números. Calculamos instantáneamente impuestos, CO2, transporte y matriculación para darte el precio final exacto en España.
+                </p>
+             </div>
+          </div>
+        </div>
+      </section>
       {/* Services/Packs Bar */}
       <div className="bg-background py-20">
         <div className="container mx-auto px-5 max-w-[1100px]">

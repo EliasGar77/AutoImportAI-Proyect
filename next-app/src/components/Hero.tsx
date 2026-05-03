@@ -14,6 +14,15 @@ export default function Hero() {
       </div>
 
       <div className="container relative z-10 mx-auto px-5 max-w-[1000px] flex flex-col items-center text-center mt-8">
+        {/* AI Active Badge */}
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 backdrop-blur-md border border-white/80 shadow-sm mb-6 animate-fade-in-up">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#2997ff] opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#2997ff]"></span>
+          </span>
+          <span className="text-sm font-bold text-[#1d1d1f] tracking-wide">IA de Importación Activa</span>
+        </div>
+
         <h1 className="text-5xl md:text-6xl lg:text-[72px] font-extrabold tracking-tight leading-[1.05] text-[#3e3028] mb-6 drop-shadow-sm">
           Cambia de coche como<br/>cambias de marcha.
         </h1>
