@@ -99,6 +99,34 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Video Presentation Section */}
+      <section className="bg-surface py-24 border-b border-border-color">
+        <div className="container mx-auto px-5 max-w-[1000px]">
+          <div className="text-center mb-12">
+             <div className="inline-flex items-center justify-center gap-2 bg-[#1d1d1f] text-white px-4 py-1.5 rounded-full text-sm font-bold mb-4">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                Conócenos
+             </div>
+             <h2 className="text-3xl md:text-5xl font-bold text-text-main tracking-tight mb-4">
+                El futuro de la importación, <span className="text-[#2997ff]">hoy.</span>
+             </h2>
+             <p className="text-lg text-text-muted max-w-2xl mx-auto">
+                Descubre en este vídeo cómo nuestra tecnología está cambiando las reglas del juego y ahorrando miles de euros a nuestros clientes.
+             </p>
+          </div>
+          
+          <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-black/5 bg-black group hover:shadow-[0_20px_50px_rgba(41,151,255,0.15)] transition-all">
+             <iframe 
+                className="absolute top-0 left-0 w-full h-full z-0"
+                src="https://www.youtube.com/embed/GRIeucCItQ4?rel=0&showinfo=0&modestbranding=1" 
+                title="AutoImport Next Gen Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+             ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Listings Placeholder */}
       <section className="container mx-auto px-5 mt-16 max-w-[1280px]">
         <div className="flex justify-between items-center mb-8">
